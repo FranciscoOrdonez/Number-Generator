@@ -1,0 +1,56 @@
+#number generator
+# I am going to create a function number-generator with two parameters: 'digit' which is a string of 10 numbers
+#from zero to nine in different order representing the digit's index location, and 'ref_num' which is a string
+#reprenting the number to analyze.  We first put zeros to 'first_value' which is the beginning of index of 
+#numbers, representing the beginning milliseconds  and,  to 'sum_total' which is the total's sum of milliseconds 
+# in iteration.  
+
+def number_generator(digit, ref_num):
+    first_value = 0
+    sum_values = 0
+    
+#     Error 1    
+#     for i in range(len(ref_num)):
+#        find_index = digit.index(ref_num[i])
+#        abs_sub = abs(first_value - find_index)
+#        sum_values += abs_sub
+#        first_value = abs_sub
+#    return sum_values
+#         
+#   Reason:   where digit = '8459761203' and ref_number = '5439' the answer is now 16
+#             and should be 17. 
+#             The error is that assignment to first_value is abs_sub and should be find_index
+#
+
+    for i in range(len(ref_num)):
+        find_index = digit.index(ref_num[i])
+        iteration_sum = abs(first_value - find_index)
+        sum_values += iteration_sum
+        first_value = find_index
+    return sum_values
+
+#test no. 1
+digit = '0123456789'
+ref_num = '210'
+print(number_generator(digit,ref_num))
+
+#test no. 2
+digit = '8459761203'
+ref_num = '5439'
+print(number_generator(digit,ref_num))
+
+
+#test no. 3
+digit = '8459761203'
+ref_num = '1'
+print(number_generator(digit,ref_num))
+
+#test no. 4
+digit = '8459761203'
+ref_num = '9999'
+print(number_generator(digit,ref_num))
+
+#test no. 5
+digit = '5432109876'
+ref_num = '5432109876'
+print(number_generator(digit,ref_num))
