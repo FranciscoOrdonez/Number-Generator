@@ -32,25 +32,25 @@ def number_generator(digit, ref_num):
 #test no. 1
 digit = '0123456789'
 ref_num = '210'
-print(number_generator(digit,ref_num))
+print(number_generator(digit,ref_num))       #answer = 4
 
 #test no. 2
 digit = '8459761203'
 ref_num = '5439'
-print(number_generator(digit,ref_num))
+print(number_generator(digit,ref_num))       #answer = 17
 
 
 #test no. 3
 digit = '8459761203'
 ref_num = '1'
-print(number_generator(digit,ref_num))
+print(number_generator(digit,ref_num))       #answer = 6
 
 #test no. 4
 digit = '8459761203'
 ref_num = '9999'
-print(number_generator(digit,ref_num))
+print(number_generator(digit,ref_num))        #answer = 3
 
 #test no. 5
 digit = '5432109876'
 ref_num = '5432109876'
-print(number_generator(digit,ref_num))
+print(number_generator(digit,ref_num))        #answer = 9
